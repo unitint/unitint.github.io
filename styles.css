@@ -1,75 +1,99 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9; /* Light background */
     color: #333;
-  }
-  
-  /* Navbar Styling */
-  .navbar {
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    position: sticky; /* Keeps the header at the top */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #222; /* Dark background */
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
+}
+
+.navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #0db8de; /* Accent color */
-  }
-  
-  .nav-links {
+}
+
+.navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 1.5rem;
+}
+
+.navbar .nav-links a {
     color: #fff;
-    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover, .nav-links .active {
-    color: #0db8de; /* Accent color */
-  }
-  
-  /* Main Section Styling */
-  main {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  main h1 {
-    font-size: 2.5rem;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: #4caf50; /* Green highlight for active/hover */
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 2rem;
+    background: #fff;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section:nth-child(even) {
+    background: #f9f9f9;
+}
+
+h1, h2 {
     margin-bottom: 1rem;
-  }
-  
-  main p {
-    font-size: 1.2rem;
-    color: #555;
-  }
-  
-  /* Footer Styling */
-  footer {
+    color: #222;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #222;
+    padding: 1rem;
+    background: #222;
     color: #fff;
     margin-top: 2rem;
-  }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links li {
+        margin: 0.5rem 0;
+    }
+}
