@@ -1,16 +1,75 @@
-body{
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222; /* Dark background */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0db8de; /* Accent color */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover, .nav-links .active {
+    color: #0db8de; /* Accent color */
+  }
+  
+  /* Main Section Styling */
+  main {
+    padding: 2rem;
     text-align: center;
-    margin: 20px;
-}
-h1{
-    color: navy
-}
-p{
-    font-size: 1.2em;
-}
-footer{
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: gray;
-}
+  }
+  
+  main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  main p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #222;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
