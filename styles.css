@@ -16,6 +16,7 @@
     width: 200px; /* Adjust as needed */
     height: auto;
 }
+
 /* General Styles */
 body {
     margin: 0;
@@ -23,6 +24,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f9;
+    display: none; /* Hide content initially */
 }
 
 header {
@@ -39,7 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    flex-wrap: wrap; /* Allows wrapping for small screens */
+    flex-wrap: wrap;
 }
 
 .navbar .logo {
@@ -62,6 +64,8 @@ header {
 }
 
 .navbar .nav-links a {
+    display: flex;
+    align-items: center;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
@@ -69,31 +73,35 @@ header {
     transition: color 0.3s ease;
 }
 
-.navbar .nav-links a:hover,
+.navbar .nav-links a .icon {
+    width: 24px; /* Icon size */
+    height: 24px;
+    display: inline-block;
+}
+
+.navbar .nav-links a .text {
+    display: none;
+    margin-left: 8px;
+}
+
 .navbar .nav-links a.active {
-    color: #4caf50; /* Green highlight for active/hover */
+    color: #4caf50; /* Active color */
 }
 
-/* Section Styles */
-section {
-    padding: 4rem 2rem;
-    background: #fff;
-    margin: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.navbar .nav-links a:hover .icon {
+    display: none;
 }
 
-section:nth-child(even) {
-    background: #f9f9f9;
+.navbar .nav-links a:hover .text {
+    display: inline-block;
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
-    color: #222;
+.navbar .nav-links a.active .icon {
+    display: none;
 }
 
-p {
-    margin-bottom: 1rem;
+.navbar .nav-links a.active .text {
+    display: inline-block;
 }
 
 /* Footer */
