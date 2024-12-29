@@ -1,7 +1,7 @@
-// scripts.js
 window.onload = function () {
     setTimeout(function () {
-        document.getElementById('loading-screen').style.display = 'none'; // Hide loading screen
-        document.body.style.display = 'block'; // Show main content
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.classList.add('hidden'); // Add the hidden class to fade out
+        setTimeout(() => loadingScreen.style.display = 'none', 1000); // Remove from flow after fade-out
     }, 3000); // 3 seconds delay
 };
