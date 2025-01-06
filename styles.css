@@ -16,6 +16,7 @@
     width: 200px; /* Adjust as needed */
     height: auto;
 }
+
 /* General Styles */
 body {
     margin: 0;
@@ -67,6 +68,18 @@ header {
     font-weight: bold;
     padding: 0.5rem;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links a img {
+    margin-right: 8px;
+    width: 24px; /* Icon size */
+    height: 24px;
+}
+
+.navbar .nav-links a .nav-text {
+    display: inline;
 }
 
 .navbar .nav-links a:hover,
@@ -105,32 +118,43 @@ footer {
     margin-top: 2rem;
 }
 
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
+/* Small Devices (portrait tablets and below) */
+@media (max-width: 767px) {
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 0.5rem 1rem;  /* Adjust padding for better layout */
+    }
+
+    .navbar .logo {
+        font-size: 1.2rem; /* Adjust the logo size */
     }
 
     .navbar .nav-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack the navigation links vertically */
+        align-items: center; /* Center align the links */
+        padding-top: 0.5rem;
     }
 
     .navbar .nav-links li {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0; /* Add space between links */
     }
 
+    .nav-links a {
+        padding: 0.5rem; /* Adjust padding for better spacing */
+    }
+
+    /* Adjust Section Padding */
     section {
-        padding: 2rem 1rem; /* Reduce padding on smaller screens */
+        padding: 2rem 1rem; /* Reduce padding for small screens */
     }
 
+    /* Text Size Adjustments */
     h1, h2 {
-        font-size: 1.5rem; /* Adjust heading sizes */
+        font-size: 1.5rem; /* Adjust heading size */
     }
 
     p {
-        font-size: 1rem; /* Adjust paragraph size */
+        font-size: 1rem; /* Adjust paragraph font size */
     }
 }
 
@@ -142,6 +166,11 @@ footer {
 
     .navbar .logo {
         font-size: 1.2rem; /* Smaller logo */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center; /* Stack items vertically */
     }
 
     .navbar .nav-links li {
