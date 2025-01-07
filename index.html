@@ -6,7 +6,7 @@
     <meta name="description" content="Personal website of Jose Rizal, showcasing his works and legacy.">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/j.png" type="image/jpeg"> <!-- Updated favicon path -->
+    <link rel="icon" href="images/j.png" type="image/jpeg">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -16,14 +16,19 @@
 
     <!-- Main Content -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main navigation">
             <div class="logo">John Emman Isuga</div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#home"><img src="images/home.png" alt="Home Icon"><span class="nav-text">Home</span></a></li>
-                <li><a href="#expertise"><img src="images/skill.png" alt="Expertise Icon"><span class="nav-text">Expertise</span></a></li>
-                <li><a href="#work"><img src="images/work.png" alt="Work Icon"><span class="nav-text">Work</span></a></li>
-                <li><a href="#experience"><img src="images/experience.png" alt="Experience Icon"><span class="nav-text">Experience</span></a></li>
-                <li><a href="#contact"><img src="images/contact.png" alt="Contact Icon"><span class="nav-text">Contact</span></a></li>
+                <li><a href="#home" class="nav-link"><img src="images/home.png" alt="Home Icon"><span class="nav-text">Home</span></a></li>
+                <li><a href="#expertise" class="nav-link"><img src="images/skill.png" alt="Expertise Icon"><span class="nav-text">Expertise</span></a></li>
+                <li><a href="#work" class="nav-link"><img src="images/work.png" alt="Work Icon"><span class="nav-text">Work</span></a></li>
+                <li><a href="#experience" class="nav-link"><img src="images/experience.png" alt="Experience Icon"><span class="nav-text">Experience</span></a></li>
+                <li><a href="#contact" class="nav-link"><img src="images/contact.png" alt="Contact Icon"><span class="nav-text">Contact</span></a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +38,6 @@
             <h1>Welcome to My Page!</h1>
             <p>Pa sobrion mo ako otro maski 3libo, bayadan kita sa jan. itao ko mama</p>
         </section>
-
         <section id="expertise">
             <h2>Expertise</h2>
             <p>I specialize in the following areas:</p>
@@ -44,7 +48,6 @@
                 <li>Digital Marketing</li>
             </ul>
         </section>
-
         <section id="work">
             <h2>Work</h2>
             <p>Here are some of the projects I have worked on:</p>
@@ -54,7 +57,6 @@
                 <li><strong>Project 3:</strong> Blog platform with custom CMS.</li>
             </ul>
         </section>
-
         <section id="experience">
             <h2>Experience</h2>
             <p>I have over 5 years of experience in the tech and design industry. Below are some of the key highlights:</p>
@@ -64,7 +66,6 @@
                 <li>Conducted workshops and training sessions for aspiring developers.</li>
             </ul>
         </section>
-
         <section id="contact">
             <h2>Contact</h2>
             <p>You can reach me at:</p>
