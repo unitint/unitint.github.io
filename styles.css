@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    background: #222;
+    background: rgba(34, 34, 34, 0.95);
+    backdrop-filter: blur(5px);
     color: #fff;
     position: sticky;
     top: 0;
@@ -55,6 +56,7 @@ header {
 #hero .btn:hover {
     background: #222;
     color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
@@ -124,6 +126,7 @@ header {
 .navbar .nav-links a.active {
     color: #4caf50;
     transform: scale(1.1);
+    border-bottom: 2px solid #4caf50;
 }
 
 .navbar-toggle {
