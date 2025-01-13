@@ -29,6 +29,7 @@ header {
     color: #4caf50;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    
 }
 
 #hero h1 {
@@ -39,8 +40,8 @@ header {
 }
 
 #hero-img {
-    width: 120px; /* Increase the width of the image */
-    height: 120px; /* Match the height to the width */
+    width: 150px; /* Increase the width of the image */
+    height: 150px; /* Match the height to the width */
     border-radius: 50%; /* Make it circular */
     border: 4px solid #4caf50; /* Optional border for emphasis */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger shadow for more impact */
@@ -220,6 +221,19 @@ footer {
 
     p {
         font-size: 1rem;
+    }
+
+    #hero-img {
+        width: 100px; /* Make image smaller on mobile */
+        height: 100px;
+    }
+
+    #hero h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    #hero p {
+        font-size: 1.2rem; /* Adjust paragraph size */
     }
 }
 

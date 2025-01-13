@@ -1,3 +1,10 @@
+// Ensure the page always loads at #hero on refresh
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+    document.querySelector('#hero').scrollIntoView({ behavior: 'smooth'});
+});
 
 // Toggle navbar visibility on mobile
 const navbarToggle = document.querySelector('.navbar-toggle');
