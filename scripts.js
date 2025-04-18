@@ -1,11 +1,13 @@
-// Toggle navbar on mobile
+// Toggle mobile nav
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navLinks = document.querySelector('.nav-links');
 navbarToggle?.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+  const expanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+  navbarToggle.setAttribute('aria-expanded', !expanded);
 });
 
-// Highlight active link
+// Active nav link highlight
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
@@ -29,7 +31,7 @@ darkToggle?.addEventListener('change', () => {
   }
 });
 
-// Scroll to top button
+// Scroll-to-top button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
   scrollToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
@@ -38,7 +40,7 @@ scrollToTopBtn?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Section reveal on scroll
+// Reveal sections on scroll
 const reveals = document.querySelectorAll('.reveal');
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
@@ -50,4 +52,4 @@ function revealOnScroll() {
   });
 }
 window.addEventListener('scroll', revealOnScroll);
-revealOnScroll(); // initial load
+revealOnScroll(); // on load

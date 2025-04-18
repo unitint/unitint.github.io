@@ -14,17 +14,17 @@
     <img src="loading/hello.webp" alt="Hello Icon" id="hero-img" />
     <h1>I'm John Emman Isuga</h1>
     <p>A passionate Cybersecurity Enthusiast and Web Developer.</p>
-    <a href="#home" class="btn">View My Page</a>
+    <a href="#home" class="btn" role="button">View My Page</a>
   </section>
 
   <!-- Navigation -->
   <header>
     <nav class="navbar" aria-label="Main navigation">
       <div class="logo">John Emman Isuga</div>
-      <button class="navbar-toggle" aria-label="Toggle navigation">
-        <img src="images/toggle.png" alt="Toggle Menu" />
+      <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
+        <img src="images/toggle.png" alt="Toggle Menu Icon" />
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="main-menu">
         <li><a href="#home" class="nav-link"><img src="images/home.png" alt="Home" /><span>Home</span></a></li>
         <li><a href="#expertise" class="nav-link"><img src="images/skill.png" alt="Expertise" /><span>Expertise</span></a></li>
         <li><a href="#work" class="nav-link"><img src="images/work.png" alt="Work" /><span>Work</span></a></li>
@@ -33,13 +33,13 @@
       </ul>
       <div class="theme-toggle">
         <input type="checkbox" id="dark-toggle" />
-        <label for="dark-toggle">🌙</label>
+        <label for="dark-toggle" title="Toggle dark mode">🌙</label>
       </div>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main>
+  <main class="container">
     <section id="home" class="reveal">
       <h1>Welcome to My Page!</h1>
       <p>Hello and thank you for visiting! I’m a passionate cybersecurity enthusiast and web developer driven by a love for solving challenges and creating innovative solutions.</p>

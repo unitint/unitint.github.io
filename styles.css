@@ -1,12 +1,23 @@
-/* Global Styles */
+/* Base Layout */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     scroll-behavior: smooth;
+    transition: background 0.3s, color 0.3s;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Navbar */
   header {
     background: rgba(34, 34, 34, 0.95);
     position: sticky;
@@ -45,7 +56,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
   }
   
   .navbar .nav-links a:hover {
@@ -54,9 +65,23 @@ body {
   
   .navbar-toggle {
     display: none;
+    cursor: pointer;
   }
   
-  /* Hero Section */
+  .theme-toggle {
+    margin-left: 1rem;
+  }
+  
+  .theme-toggle label {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  #dark-toggle {
+    display: none;
+  }
+  
+  /* Hero */
   #hero {
     background: #000;
     color: #4caf50;
@@ -87,15 +112,22 @@ body {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  #hero .btn:hover {
+    background: #4caf50;
+    color: #fff;
   }
   
   /* Sections */
   section {
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem;
+    margin: 2rem auto;
     background: #fff;
-    margin: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
   }
   
   .reveal {
@@ -109,6 +141,7 @@ body {
     transform: translateY(0);
   }
   
+  /* Footer */
   footer {
     text-align: center;
     background: #222;
@@ -116,33 +149,7 @@ body {
     padding: 1rem;
   }
   
-  /* Dark Mode */
-  body.dark {
-    background: #121212;
-    color: #e0e0e0;
-  }
-  body.dark header,
-  body.dark footer {
-    background: #1e1e1e;
-  }
-  
-  body.dark .btn {
-    background: #4caf50;
-    color: #fff;
-  }
-  
-  .theme-toggle {
-    margin-left: 1rem;
-  }
-  .theme-toggle label {
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  #dark-toggle {
-    display: none;
-  }
-  
-  /* Scroll To Top Button */
+  /* Scroll Button */
   #scrollToTopBtn {
     position: fixed;
     bottom: 40px;
@@ -158,6 +165,32 @@ body {
     cursor: pointer;
   }
   
+  /* Dark Mode */
+  body.dark {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  
+  body.dark header,
+  body.dark footer,
+  body.dark section {
+    background: #1e1e1e;
+  }
+  
+  body.dark .btn {
+    background: #81c784;
+    color: #121212;
+  }
+  
+  body.dark .btn:hover {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  body.dark .nav-links a:hover {
+    color: #81c784;
+  }
+  
   /* Responsive */
   @media (max-width: 768px) {
     .navbar .nav-links {
@@ -166,12 +199,18 @@ body {
       width: 100%;
       background: #222;
     }
+  
     .navbar .nav-links.active {
       display: flex;
     }
+  
     .navbar-toggle {
       display: block;
-      cursor: pointer;
+    }
+  
+    section {
+      margin: 1rem;
+      padding: 2rem 1rem;
     }
   }
   
