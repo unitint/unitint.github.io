@@ -190,6 +190,43 @@ body {
   body.dark .nav-links a:hover {
     color: #81c784;
   }
+  @keyframes bounceInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    80% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .bounce-in-down {
+    animation: bounceInDown 1s ease-out;
+  }
+  
+
+  @keyframes rollIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%) rotate(-120deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+  
+  .roll-in {
+    animation: rollIn 1s ease-out;
+  }
+  
   
   /* Responsive */
   @media (max-width: 768px) {
