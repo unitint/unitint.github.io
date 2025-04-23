@@ -39,6 +39,18 @@ window.addEventListener('scroll', () => {
 scrollToTopBtn?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+// In scripts.js
+const typingText = "I'm John Emman Isuga";
+let index = 0;
+function typeEffect() {
+  if (index < typingText.length) {
+    document.getElementById("typing").textContent += typingText.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
+  }
+}
+window.onload = typeEffect;
+
 
 // Reveal sections on scroll
 const reveals = document.querySelectorAll('.reveal');
