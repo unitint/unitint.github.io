@@ -131,7 +131,50 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, color 0.3s;
   }
-  
+  /* Glowing hover effect for buttons */
+.btn:hover,
+form button:hover {
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 15px #4caf50;
+}
+
+/* Glowing hover effect for navbar links */
+.navbar .nav-links a:hover {
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 10px #4caf50;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+}
+
+/* Highlight nav link when corresponding section is hovered */
+.nav-link.highlighted {
+  border: 2px solid #4caf50;
+  box-shadow: 0 0 10px #4caf50;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+}
+
+/* Dark mode version of highlight */
+body.dark .nav-link.highlighted {
+  border: 2px solid #81c784;
+  box-shadow: 0 0 15px #81c784;
+}
+
+
+/* Dark mode version */
+body.dark .navbar .nav-links a:hover {
+  border: 2px solid #81c784;
+  box-shadow: 0 0 15px #81c784;
+}
+
+
+/* For dark mode glow effect on buttons */
+body.dark .btn:hover,
+body.dark form button:hover {
+  border: 2px solid #81c784;
+  box-shadow: 0 0 20px #81c784;
+}
+
   .reveal {
     opacity: 0;
     transform: translateY(30px);
