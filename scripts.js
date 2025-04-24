@@ -10,10 +10,23 @@ navbarToggle?.addEventListener('click', () => {
 // Active nav link highlight
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    // Remove active class from all nav links
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.classList.remove('active');
+      l.removeAttribute('aria-current');
+    });
+
+    // Set active on clicked link
     link.classList.add('active');
+    link.setAttribute('aria-current', 'page');
+
+    // Auto-close nav menu on mobile
+    navLinks.classList.remove('active');
+    navbarToggle.setAttribute('aria-expanded', 'false');
   });
 });
+
+
 
 // Section hover highlights corresponding nav link
 const sections = document.querySelectorAll('section[id]');
