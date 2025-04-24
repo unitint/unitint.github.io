@@ -96,3 +96,50 @@ function revealOnScroll() {
 }
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // on load
+
+
+function animateSkills() {
+  document.querySelectorAll('.skill-fill').forEach(bar => {
+    const level = bar.getAttribute('data-level');
+    bar.style.width = level;
+  });
+}
+
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('#expertise');
+  const rect = section.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    animateSkills();
+  }
+});
+
+
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+// Optional: Close modals when clicking outside the content
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
+let testimonialIndex = 0;
+
+function showTestimonials() {
+  const testimonials = document.querySelectorAll('.testimonial');
+  testimonials.forEach(t => t.classList.remove('active'));
+  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+  testimonials[testimonialIndex].classList.add('active');
+}
+
+setInterval(showTestimonials, 5000); // rotates every 5s
+
+

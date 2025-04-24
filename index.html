@@ -49,22 +49,83 @@
 
     <section id="expertise" class="reveal">
       <h2>I Specialize In</h2>
-      <ul>
-        <li><strong>Web Development:</strong> Building responsive and user-friendly websites.</li>
-        <li><strong>Graphic Design:</strong> Crafting visuals that communicate ideas.</li>
-        <li><strong>Content Writing:</strong> Creating clear, compelling content.</li>
-        <li><strong>Digital Marketing:</strong> Strategizing online presence and audience engagement.</li>
-      </ul>
+    
+      <div class="skills">
+        <div class="skill">
+          <span>Web Development</span>
+          <div class="skill-bar"><div class="skill-fill" data-level="90%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Cybersecurity</span>
+          <div class="skill-bar"><div class="skill-fill" data-level="85%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Graphic Design</span>
+          <div class="skill-bar"><div class="skill-fill" data-level="75%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Content Writing</span>
+          <div class="skill-bar"><div class="skill-fill" data-level="80%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Digital Marketing</span>
+          <div class="skill-bar"><div class="skill-fill" data-level="70%"></div></div>
+        </div>
+      </div>
     </section>
+    
 
     <section id="work" class="reveal">
       <h2>My Projects</h2>
-      <ul>
-        <li><strong>E-commerce Website:</strong> For a local business.</li>
-        <li><strong>Branding & Design:</strong> For a startup.</li>
-        <li><strong>Blog Platform:</strong> Built with a custom CMS.</li>
-      </ul>
+      <div class="project-grid">
+        <div class="project-card" onclick="openModal('project1')">
+          <h3>E-commerce Website</h3>
+          <p>Local business site</p>
+        </div>
+        <div class="project-card" onclick="openModal('project2')">
+          <h3>Branding & Design</h3>
+          <p>Startup identity kit</p>
+        </div>
+        <div class="project-card" onclick="openModal('project3')">
+          <h3>Blog Platform</h3>
+          <p>Custom CMS blogging</p>
+        </div>
+      </div>
     </section>
+    
+    <!-- Modals -->
+    <div id="project1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('project1')">&times;</span>
+        <h2>E-commerce Website</h2>
+        <img src="images/ecommerce.png" alt="E-commerce Screenshot" />
+        <p>A full-featured website for a local business with shopping cart, product pages, and checkout.</p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JS, PHP, MySQL</p>
+        <a href="https://example.com" target="_blank" class="btn">View Live</a>
+      </div>
+    </div>
+    
+    <div id="project2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('project2')">&times;</span>
+        <h2>Branding & Design</h2>
+        <img src="images/branding.png" alt="Branding Screenshot" />
+        <p>Complete branding solution including logo, business cards, and social media banners.</p>
+        <p><strong>Tools:</strong> Adobe Illustrator, Photoshop</p>
+      </div>
+    </div>
+    
+    <div id="project3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('project3')">&times;</span>
+        <h2>Blog Platform</h2>
+        <img src="images/blog.png" alt="Blog Screenshot" />
+        <p>A blogging platform with admin panel, post categories, and custom CMS.</p>
+        <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, EJS</p>
+        <a href="https://example.com/blog" target="_blank" class="btn">View Demo</a>
+      </div>
+    </div>
+    
 
     <section id="experience" class="reveal">
       <h2>Experience</h2>
@@ -74,6 +135,25 @@
         <li><strong>OJT Web Developer:</strong> 4 months - contributed to real-world development tasks.</li>
       </ul>
     </section>
+
+    <section id="testimonials" class="reveal">
+      <h2>What Others Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial active">
+          <p>"John Emman was instrumental in helping our team launch our startup website. His attention to detail and creativity were top-notch."</p>
+          <h4>- Kevin Datingaling, Startup Co.</h4>
+        </div>
+        <div class="testimonial">
+          <p>"During his internship, John consistently delivered clean, secure, and well-documented code. A true professional."</p>
+          <h4>- Dev Lead, OJT Company</h4>
+        </div>
+        <div class="testimonial">
+          <p>"He brought a great mix of design and development to our school project. Super dependable and a great team player!"</p>
+          <h4>- Classmate, Capstone Project</h4>
+        </div>
+      </div>
+    </section>
+    
 
     <section id="contact" class="reveal">
       <h2>Contact Me</h2>
